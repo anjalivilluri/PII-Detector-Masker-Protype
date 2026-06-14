@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Rahul",
+    "Email": "rahul@gmail.com",
+    "Phone": "9876543210",
+    "PAN": "ABCDE1234F",
+    "Aadhaar": "123456789012"
+  },
+  {
+    "Name": "Priya",
+    "Email": "priya@yahoo.com",
+    "Phone": "9123456789",
+    "PAN": "FGHIJ5678K",
+    "Aadhaar": "234567890123"
+  }
+]

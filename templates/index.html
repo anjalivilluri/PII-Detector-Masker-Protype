@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>PII Shield AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="particles">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="container">
+
+<div class="logo">
+
+🛡️
+
+</div>
+
+<h1>
+
+PII SHIELD AI
+
+</h1>
+
+<h2 class="typing">
+
+Hybrid AI Privacy Detection Engine
+
+</h2>
+
+<div class="upload-panel">
+
+<form
+action="/upload"
+method="POST"
+enctype="multipart/form-data">
+
+<div class="file-upload">
+
+<input
+type="file"
+id="file"
+name="file"
+required>
+
+<label for="file">
+
+📂 Select Dataset
+
+</label>
+
+</div>
+
+<button>
+
+SCAN DATASET
+
+</button>
+
+</form>
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+
+<h3>Email</h3>
+
+<p>Detection</p>
+
+</div>
+
+<div class="card">
+
+<h3>Phone</h3>
+
+<p>Detection</p>
+
+</div>
+
+<div class="card">
+
+<h3>PAN</h3>
+
+<p>Detection</p>
+
+</div>
+
+<div class="card">
+
+<h3>Aadhaar</h3>
+
+<p>Detection</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

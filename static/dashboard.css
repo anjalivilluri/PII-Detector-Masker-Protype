@@ -1,0 +1,256 @@
+body{
+
+margin:0;
+
+font-family:Segoe UI;
+
+display:flex;
+
+background:#0f172a;
+
+color:white;
+}
+
+.sidebar{
+
+width:250px;
+
+height:100vh;
+
+background:#111827;
+
+padding:30px;
+}
+
+.sidebar ul{
+
+list-style:none;
+
+padding:0;
+}
+
+.sidebar li{
+
+padding:15px;
+
+margin-top:10px;
+
+background:#1f2937;
+
+border-radius:10px;
+
+cursor:pointer;
+}
+
+.sidebar li:hover{
+
+background:#2563eb;
+}
+
+.main{
+
+flex:1;
+
+padding:40px;
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:20px;
+}
+
+.card{
+
+padding:25px;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,0.08);
+
+backdrop-filter:
+blur(15px);
+
+border:
+1px solid
+rgba(255,255,255,.1);
+
+transition:.4s;
+}
+
+.card:hover{
+
+transform:
+translateY(-12px);
+
+box-shadow:
+0 0 25px
+#06b6d4;
+}
+.compliance{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+margin-top:40px;
+
+margin-bottom:40px;
+
+overflow:visible;
+}
+.circle{
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:42px;
+
+font-weight:bold;
+
+background:
+conic-gradient(
+#10b981 0deg,
+#10b981 300deg,
+#1e293b 300deg
+);
+
+animation:
+rotateCircle 2s ease;
+}
+@keyframes rotateCircle{
+
+from{
+
+transform:scale(0);
+}
+
+to{
+
+transform:scale(1);
+}
+}
+
+.download{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:15px 25px;
+
+background:#10b981;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+}
+.analytics-section{
+
+    margin-top:40px;
+}
+
+.chart-container{
+
+    margin-top:20px;
+}
+
+.bar{
+
+    margin-bottom:20px;
+}
+
+.fill{
+
+    height:25px;
+
+    border-radius:20px;
+
+    animation:growBar 2s ease;
+}
+
+.email{
+
+    background:#3b82f6;
+}
+
+.phone{
+
+    background:#10b981;
+}
+
+.pan{
+
+    background:#f59e0b;
+}
+
+.aadhaar{
+
+    background:#ef4444;
+}
+
+@keyframes growBar{
+
+    from{
+
+        width:0;
+    }
+}
+.history-table{
+
+width:100%;
+
+margin-top:30px;
+
+border-collapse:collapse;
+
+background:#1e293b;
+
+border-radius:10px;
+
+overflow:hidden;
+}
+
+.history-table th{
+
+background:#2563eb;
+
+padding:15px;
+
+color:white;
+}
+
+.history-table td{
+
+padding:15px;
+
+text-align:center;
+
+border-bottom:
+1px solid #334155;
+}
+
+.history-table tr:hover{
+
+background:#334155;
+}

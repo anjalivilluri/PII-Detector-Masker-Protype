@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>
+        🛡️ PII Shield
+    </h2>
+
+    <ul>
+
+        <li>Dashboard</li>
+
+        <li>Upload</li>
+
+        <li>Reports</li>
+
+        <li>Compliance</li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <h1>
+        Scan Analytics
+    </h1>
+
+    <!-- Statistics Cards -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Emails</h3>
+
+            <h1 class="counter">
+                {{ report.EMAIL }}
+            </h1>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Phones</h3>
+
+            <h1 class="counter">
+                {{ report.PHONE }}
+            </h1>
+
+        </div>
+
+        <div class="card">
+
+            <h3>PAN</h3>
+
+            <h1 class="counter">
+                {{ report.PAN }}
+            </h1>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Aadhaar</h3>
+
+            <h1 class="counter">
+                {{ report.AADHAAR }}
+            </h1>
+
+        </div>
+
+    </div>
+
+    <!-- Compliance Score -->
+
+    <div class="compliance">
+
+        <h2>
+            Compliance Score
+        </h2>
+
+        <div class="circle">
+
+            {{ report.COMPLIANCE_SCORE }}%
+
+        </div>
+
+    </div>
+
+    <!-- Analytics Section -->
+
+    <div class="analytics-section">
+
+        <h2>
+            Detection Analytics
+        </h2>
+
+        <div class="chart-container">
+
+            <div class="bar">
+
+                <div
+                    class="fill email"
+                    data-width="{{ report.EMAIL_WIDTH }}"
+                </div>
+
+                <span>
+                    Emails: {{ report.EMAIL }}
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <div
+                    class="fill phone"
+                    data-width="{{ report.PHONE_WIDTH }}"
+                </div>
+
+                <span>
+                    Phones: {{ report.PHONE }}
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <div
+                    class="fill pan"
+                    data-width="{{ report.PAN_WIDTH }}"
+                </div>
+
+                <span>
+                    PAN: {{ report.PAN }}
+                </span>
+
+            </div>
+
+            <div class="bar">
+
+                <div
+                    class="fill aadhaar"
+                    data-width="{{ report.AADHAAR_WIDTH }}"
+                </div>
+
+                <span>
+                    Aadhaar: {{ report.AADHAAR }}
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Download Button -->
+   <hr>
+
+<h2>
+
+Recent Scan History
+
+</h2>
+
+<table class="history-table">
+
+<tr>
+
+<th>Emails</th>
+
+<th>Phones</th>
+
+<th>PAN</th>
+
+<th>Aadhaar</th>
+
+<th>Total</th>
+
+<th>Compliance</th>
+
+</tr>
+
+{% for item in history %}
+
+<tr>
+
+<td>{{ item.emails }}</td>
+
+<td>{{ item.phones }}</td>
+
+<td>{{ item.pan }}</td>
+
+<td>{{ item.aadhaar }}</td>
+
+<td>{{ item.total }}</td>
+
+<td>{{ item.compliance }}%</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+    <a
+        href="/download"
+        class="download">
+
+        Download Masked File
+
+    </a>
+
+</div>
+
+<!-- Counter Animation -->
+
+<script>
+
+const counters =
+document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+    const target =
+    Number(counter.innerText);
+
+    let current = 0;
+
+    const increment =
+    target / 40;
+
+    const timer =
+    setInterval(() => {
+
+        current += increment;
+
+        if(current >= target){
+
+            counter.innerText =
+            target;
+
+            clearInterval(timer);
+
+        }
+        else{
+
+            counter.innerText =
+            Math.floor(current);
+
+        }
+
+    },30);
+
+});
+
+</script>
+<script>
+
+document
+.querySelectorAll('.fill')
+.forEach(bar => {
+
+    const width =
+    bar.dataset.width;
+
+    bar.style.width =
+    width + "%";
+
+});
+
+</script>
+
+</body>
+
+</html>
