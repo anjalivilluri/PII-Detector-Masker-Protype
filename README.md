@@ -251,7 +251,7 @@ Step 1
 
 Clone Repository
 
-https://github.com/anjalivilluri/PII-Detector-Masker-Protype.git
+https://github.com/anjalivilluri/PII-Detector-Masker-Prototype.git
 
 ---
 
