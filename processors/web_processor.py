@@ -60,10 +60,10 @@ def process_uploaded_csv(file_path):
 
                 df.at[index, column] = mask_aadhaar(value)
 
-    output_file = "output/masked.csv"
+    outputs_file = "outputs/masked.csv"
 
     df.to_csv(
-        output_file,
+        outputs_file,
         index=False
     )
 
@@ -151,4 +151,4 @@ def process_uploaded_csv(file_path):
             indent=4
         )
 
-    return report, output_file
+    return report, outputs_file

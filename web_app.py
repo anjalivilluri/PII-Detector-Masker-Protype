@@ -18,7 +18,6 @@ generated_file = None
 
 UPLOAD_FOLDER = "uploads"
 
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs("uploads", exist_ok=True)
 os.makedirs("outputs", exist_ok=True)
 os.makedirs("data", exist_ok=True)
