@@ -238,5 +238,29 @@
         "aadhaar": 3,
         "total": 12,
         "compliance": 40
+    },
+    {
+        "emails": 1,
+        "phones": 1,
+        "pan": 0,
+        "aadhaar": 0,
+        "total": 2,
+        "compliance": 90
+    },
+    {
+        "emails": 1,
+        "phones": 1,
+        "pan": 0,
+        "aadhaar": 0,
+        "total": 2,
+        "compliance": 90
+    },
+    {
+        "emails": 3,
+        "phones": 3,
+        "pan": 3,
+        "aadhaar": 3,
+        "total": 12,
+        "compliance": 40
     }
 ]
